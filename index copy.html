@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-Movies - Pantai Timur</title>
+  <!--BS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+  <link rel="icon" href="https://www.iconpacks.net/icons/1/free-movie-icon-850-thumb.png">
+  <!--CSS-->
+  <link rel="stylesheet" href="Style.css">
+  <!--Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+JP:wght@500&family=Open+Sans:wght@700&display=swap"
+    rel="stylesheet">
+
+<body>
+  <div class="container"></div>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand"><span class=" fs-1"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+            fill="currentColor" class="bi bi-camera-reels-fill" viewBox="0 0 16 16">
+            <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            <path
+              d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z" />
+          </svg> T-</span><span style="color: #00ADB5;" class=" fs-1">Movies</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Genre
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Survival</a></li>
+              <li><a class="dropdown-item" href="#">Horor</a></li>
+              <li><a class="dropdown-item" href="#">Anime</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <span class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#SignInModal"><b>Sign In</b></a>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <!-----Alert---->
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Welcome,</strong> keep spirit and never give up until the end.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <!--Breadcrumb-->
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page" style="color: whitesmoke;">Data</li>
+    </ol>
+
+    <!--Carousel-->
+    <div class="countainer-carousel">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img class="rounded"
+              src="https://storage.googleapis.com/finansialku_media/wordpress_media/2022/11/5bd1c4bd-black-adam.-sumber-imdb-1.jpg"
+              alt="Black Adam">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img class="rounded" src="https://flxt.tmsimg.com/assets/p28873_p_v8_aj.jpg" alt="Black Hawk Down">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img class="rounded" src="https://www.tagar.id/Asset/uploads2019/1606552655756-film-the-call.jpg"
+              alt="The Call">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img class="rounded" src="https://assets-a1.kompasiana.com/statics/files/14304578521809826310.jpg"
+              alt="Naruto The Last">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr id="Line">
+
+    <!--Card-->
+    <a class="navbar-brand"><span style="color: #00ADB5; font-size: 35px;" class=" fs-1">T-</span><span
+        style="color: #EEEEEE; font-size: 35px;" class=" fs-1">Movies</span></a>
+    <div class="container-fluid">
+      <div class="row" style="margin: 10px 0px 20px 0px;">
+        <div class="column col-6 col-md-3">
+          <div class="card">
+            <img
+              src="https://storage.googleapis.com/finansialku_media/wordpress_media/2022/11/5bd1c4bd-black-adam.-sumber-imdb-1.jpg"
+              class="card-img-top" style="margin-bottom: 5px; height: 250px;" alt="Black Adam">
+            <div class="card-body">
+              <h5 class="card-title"><b>Black Adam</b></h5>
+              <div class="movies-info">
+                <span><b>Realese Date:</b></span>
+                <span><b>21/10/2022</b></span>
+              </div>
+              <div class="movies-info">
+                <span><b>Rating:</b></span>
+                <span><b>55%</b></span>
+              </div>
+              <a href="https://youtu.be/X0tOpBuYasI">
+                <button class="glow-on-hover" type="button">Watch Trailer</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="column col-6 col-md-3">
+          <div class="card">
+            <img src="https://flxt.tmsimg.com/assets/p28873_p_v8_aj.jpg" class="card-img-top" alt="Black Hawk Down"
+              style="margin-bottom: 5px; height: 250px;">
+            <div class="card-body">
+              <h5 class="card-title"><b>Black Hawk Down</b></h5>
+              <div class="movies-info">
+                <span><b>Realese Date:</b></span>
+                <span><b>21/10/2022</b></span>
+              </div>
+              <div class="movies-info">
+                <span><b>Rating:</b></span>
+                <span><b>76%</b></span>
+              </div>
+              <a href="https://youtu.be/X0tOpBuYasI">
+                <button class="glow-on-hover" type="button">Watch Trailer</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="column col-6 col-md-3">
+          <div class="card">
+            <img src="https://www.tagar.id/Asset/uploads2019/1606552655756-film-the-call.jpg" class="card-img-top"
+              style="margin-bottom: 5px; height: 250px;" alt="The Call">
+            <div class="card-body">
+              <h5 class="card-title"><b>The Call</b></h5>
+              <div class="movies-info">
+                <span><b>Realese Date:</b></span>
+                <span><b>21/10/2022</b></span>
+              </div>
+              <div class="movies-info">
+                <span><b>Rating:</b></span>
+                <span><b>55%</b></span>
+              </div>
+              <a href="https://youtu.be/X0tOpBuYasI">
+                <button class="glow-on-hover" type="button">Watch Trailer</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="column col-6 col-md-3">
+          <div class="card">
+            <img src="https://assets-a1.kompasiana.com/statics/files/14304578521809826310.jpg" class="card-img-top"
+              alt="Naruto The Last" style="margin-bottom: 5px; height: 250px;">
+            <div class="card-body">
+              <h5 class="card-title"><b>Naruto The Last</b></h5>
+              <div class="movies-info">
+                <span><b>Realese Date:</b></span>
+                <span><b>21/10/2022</b></span>
+              </div>
+              <div class="movies-info">
+                <span><b>Rating:</b></span>
+                <span><b>55%</b></span>
+              </div>
+              <a href="https://youtu.be/X0tOpBuYasI">
+                <button class="glow-on-hover" type="button">Watch Trailer</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal Card-->
+
+    <!-- Modal Sign In -->
+    <div class="modal fade" id="SignInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="btn-close btn-close-signin-modal" data-bs-dismiss="modal" aria-label=""></button>
+          <div class="Signin">
+            <div class="pb_41">Sign In</div>
+            <div>
+              <input class="form-control input_email" type="email" id="email"
+                placeholder="Enter phone number of email addres">
+            </div>
+            <div>
+              <input class="form-control input_password" type="password" id="password" placeholder="Enter Password">
+            </div>
+
+            <div class="form-check form-switch d-flex justify-content-center align-items-center mt_24">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexCheckDefault" style="margin: 0;">
+              <label class="form-check-label" for="flexCheckDefault">Keep me Signed in</label>
+            </div>
+
+            <div class="d-flex flex-column">
+              <button type="button" class="btn btn-warning mt_24 btn_signin">Sign In</button>
+              <button type="button" class="btn btn-link mt_24 btn_signup">Sign Up</button>
+            </div>
+
+            <div class="or_text mt_24" style="text-align: center;">or</div>
+
+            <div class="d-flex flex-column" style="gap: 12px;">
+              <button type="button" class="btn btn-light btn_sosmed">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#28B446" class="bi bi-google"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                </svg>
+                Continue with Google</button>
+              <button type="button" class="btn btn-light btn_sosmed">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1976D2" class="bi bi-facebook"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+                Continue with Facbook</button>
+              <button type="button" class="btn btn-light btn_sosmed">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-apple"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
+                  <path
+                    d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
+                </svg>
+                Continue with Apple</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--section-->
+    <section>
+      <div class="container">
+        <div class="row">
+          <form action="#" class="row gy-3 gx-3 p-4 p-lg-5">
+            <h3>Get In Touch</h3>
+            <div class="form-group col-lg-6">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Name"
+                  required="">
+              </div>
+            </div>
+            <div class="form-group col-lg-6">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+            </div>
+            <div class="form-group col-lg-12">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Subject</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Subject"
+                  required="">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                  placeholder="Enter Your Message" required=""></textarea>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="button" class="btn btn-light">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    </br>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row gy-4 " style="justify-content: center; ">
+          <div class="col-lg-4">
+            <a class="navbar-brand"><span style="color: #00ADB5; font-size: 35px;"
+                class=" fs-1">T-</span><span style="color: #EEEEEE; font-size: 35px;" class=" fs-1">Movies</span></a>
+          </div>
+          <div class="col-lg-3 offset-lg-3">
+            <ul>
+              <h5>Useful Links</h5>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <ul>
+              <h5>Information</h5>
+              <li><a href="#">Our team</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Privacy and Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto copyright">
+            <p>Copyright © 2023 T-Movies. Designed by Ardi Wiranto</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>
